@@ -6,9 +6,7 @@ public class Main{
         int average = 0;
         for(int i = 0; i < 5; ++i) {
             int score = scanner.nextInt();
-            if(score < 40)
-                score = 40;
-            average += score;
+            average += Math.max(score, 40);
         }
         average /= 5;
         System.out.print(average);
