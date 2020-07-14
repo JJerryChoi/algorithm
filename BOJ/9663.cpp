@@ -4,11 +4,11 @@ using namespace std;
 int n;
 vector<int> board;
 
-bool isPromising(vector<int> &q, int n) {
+bool isPromising(int n) {
     for(int i = 0; i < n; ++i){
-        if(q[i] == q[n])
+        if(board[i] == board[n])
             return false;
-        if(abs(q[i]-q[n]) == (n-i))
+        if(abs(board[i] - board[n]) == (n - i))
             return false;
     }
     return true;
@@ -16,15 +16,14 @@ bool isPromising(vector<int> &q, int n) {
 
 int nQueen(int k){
     static int answer = 0;
-    int m = board.size();
-    if(k == m) {
+    if(k == n) {
         ++answer;
         return 0;
     }
 
-    for(int i = 0; i < m; ++i){
+    for(int i = 0; i < n; ++i){
         board[k] = i;
-        if(isPromising(board, k))
+        if(isPromising(k))
             nQueen(k + 1);
     }
     return answer;
