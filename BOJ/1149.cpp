@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int T, n;
+int n;
 vector<array<int, 3>> rgb;
 vector<array<int, 3>> dp;
 
