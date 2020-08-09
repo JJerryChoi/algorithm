@@ -12,7 +12,7 @@ void print(vector<vector<int>> metrix){
     }
 }
 
-vector<vector<int>> productMetrix(vector<vector<int>>& a, vector<vector<int>    >& b){
+vector<vector<int>> productMetrix(vector<vector<int>>& a, vector<vector<int>>& b){
     int n = a.size(), m = b[0].size();
     vector<vector<int>> product(n, vector<int>(m, 0));
     for(int i = 0; i < n; ++i){
